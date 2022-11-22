@@ -1,0 +1,110 @@
+.row{
+    .col-2{
+        background-color: #395144;
+        height: 800px;
+        .nav{
+            padding-top: 250px;
+            .nav-item{
+                a{
+                    color: white;
+                    text-align: center;
+                    font-size:40px;
+                }
+            }
+        }
+    }
+    .col-10{
+        background-color: #F0EBCE;
+        .header{
+            
+            .container{
+                background-color: white;
+                .navbar{
+                    .container-fluid{
+                        .navbar-brand{
+                            i{
+                                    font-size: 40px;
+                            }
+                        }
+                        .collapse{
+                            .navbar-nav{
+                                .nav-item{
+                                    margin-left: 30px;
+                                    .nav-link{
+                                        i{
+                                            font-size: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        .info{
+            margin-top: 15px;
+            
+            .container{
+                .row{
+                    
+                    .info-title{
+                        
+                        background-color: #EF9A53;
+                        ul{
+                            list-style: none;
+                            li{
+                                font-weight: bold;
+                                text-align: right;
+                            }
+                        }
+                    }
+                    .info-staff{
+                        background-color: white;
+                        
+                        ul{
+                            
+                            list-style-type: none;
+                            li{
+                                font-weight: bold;
+                                text-align: left;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .task{
+            margin-top: 20px;
+            .container{
+                background-color: white;
+                .task-title{
+                    h1{
+                        text-align: center;
+                    }
+                }
+                .task-table{
+                    .table{
+                        thead{
+                            tr{
+                                th{}
+                            }
+                        }
+                        .tblTask{
+                            tr{
+                                td{
+
+                                }
+                            }
+                        }
+                    }
+                }
+                .button{
+                    text-align: right;
+                    padding-bottom:20px ;
+                }
+            }
+        }
+    }
+}
