@@ -1,14 +1,29 @@
 from django.shortcuts import render
 from django.http import HttpResponse
 
-def home(request):
-    return HttpResponse("Hello Django!")
+"""
+Sites pre-defining (HTML web pages)
+"""
 
-def index(request, name):
+# Home page
+def home(request):
+    return HttpResponse("WELCOME TO UWC 2.0! This is our home page")
+
+# Staff management page
+def staff_manage(request):
     return render(
         request,
-        "src/index.html",
-        {
-            'name': name
-        }
+        "src/staff_manage.html"
     )
+
+# Staff main page
+def staff(request):
+    return HttpResponse("This is staff main page")
+
+# MCPs main page
+def MCP(request):
+    return HttpResponse("This is MCPs main page")
+
+# Vehicle main page
+def vehicle(request):
+    return HttpResponse("This is vehicle main page")
