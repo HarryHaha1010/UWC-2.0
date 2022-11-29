@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from django.http import HttpResponse
 
 """
@@ -7,6 +7,8 @@ Sites pre-defining (HTML web pages)
 
 # Home page
 def home(request):
+    if not request.user.is_authenticated:
+        return redirect('login')
     return HttpResponse("WELCOME TO UWC 2.0! This is our home page")
 
 # Staff management page
@@ -27,3 +29,4 @@ def MCP(request):
 # Vehicle main page
 def vehicle(request):
     return HttpResponse("This is vehicle main page")
+
