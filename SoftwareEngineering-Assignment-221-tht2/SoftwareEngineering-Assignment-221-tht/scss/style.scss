@@ -1,0 +1,288 @@
+
+.header{
+    background-color: green;
+    margin-bottom: 0px;
+    .container{
+        
+        .row{
+            .logo{
+                border-radius: 50%;
+                background-color: white;
+                height: 90px;
+                width: 90px;
+                img{
+                  
+                }
+            }
+            .col-4{
+                p{
+                    font-weight: 700;
+                    font-size: 20px;
+                    padding-top: 25px;
+                    color: white;
+                    
+                }
+            }
+            .col-4{
+                .nav{
+                    li{
+                        list-style: none;
+                        display: inline;
+                        a{
+                            text-decoration: none;
+                            color: white;
+                            font-weight: 700;
+                            font-size: 20px;
+                            &:hover{
+                                color: black;
+                            }
+                        }
+                    }
+                }
+            }
+            .search{
+                padding-top: 25px;
+                form{
+                    .form-control{
+                        
+                    }
+                    .btn{
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+.carousel{
+    // padding: 0 50px;
+}
+.picture{
+    margin-top:0px ;
+    padding: 50px;
+    background-color: green;
+    color: black;
+    padding-left: 100px;
+    .row{
+        .col-4{
+            .card{
+                
+                &:hover{
+                    transform: translateY(-20px);
+                    transition: all 0.5s;
+                    box-shadow: 1px -1px 21px 1px rgba(0,0,0,0.75);
+                    -webkit-box-shadow: 1px -1px 21px 1px rgba(0,0,0,0.75);
+                    -moz-box-shadow: 1px -1px 21px 1px rgba(0,0,0,0.75);    
+                }
+                img{
+
+                }
+                .card-body{
+                    .card-title{
+                        &:hover{
+                            color: black;
+                        }
+                    }
+                    .card-text{
+                        font-size: 18px;
+                    }
+                }
+            }
+            
+           
+        }
+    }
+}
+.nhiemVu{
+    margin-top: 0 !important;
+    .row{
+        .col-2{
+            background-color: #82CD47;
+            height: 800px;
+            .nav{
+                padding-top: 250px;
+                .nav-item{
+                    a{
+                        color: white;
+                        text-align: center;
+                        font-size:20px;
+                        &:hover{
+                            color: black;
+                        }
+                    }
+                }
+            }
+        }
+        .col-10{
+            background-color: #F0EBCE;
+            
+            .info{
+                margin-top: 15px;
+                
+                .container{
+                    
+                    .row{
+                        
+                        .info-title{
+                            border-radius: 6px;
+                            background-color: #EF9A53;
+                            padding-top: 10px;
+                            ul{
+                                list-style: none;
+                                li{
+                                    font-weight: bold;
+                                    text-align: right;
+                                }
+                            }
+                        }
+                        .info-staff{
+                            background-color: white;
+                            border-radius: 6px;
+                            ul{
+                                padding-top: 10px;
+                                list-style-type: none;
+                                li{
+                                    font-weight: bold;
+                                    text-align: left;
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+            .task{
+                margin-top: 20px;
+                
+                .container{
+                    border-radius: 6px;
+                    background-color: white;
+                    .task-title{
+                        h1{
+                            text-align: center;
+                        }
+                    }
+                    .task-table{
+                        .table{
+                            thead{
+                                tr{
+                                    th{}
+                                }
+                            }
+                            .tblTask{
+                                tr{
+                                    td{
+    
+                                    }
+                                }
+                            }
+                        }
+                    }
+                    .button{
+                        text-align: right;
+                        padding-bottom:20px ;
+                    }
+                    .modal{
+                        margin-top: 60px;
+                        background-color: rgba(0,0,0,0.2);
+                        
+                        .modal-dialog{
+                            .modal-content{
+                                .modal-header{
+                                    .modal-title{
+                                        text-align: center;
+                                        color: black;
+                                        font-weight: 700;
+                                    }
+                                }
+                                .modal-body{
+                                    .form_add_task{
+                                        form{
+                                           .form-title{
+                                            color: black;
+                                            font-weight: 700;
+                                            margin-top: 10px ;
+                                           } 
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.footer{
+    margin-top: 50px;
+    font-size: 18px;
+    .container{
+        .contact-us{
+            h3{
+                text-align: center;
+                margin-bottom: 50px;
+                &:hover{
+                    color: green;
+                }
+            }
+            ul{
+                li{
+                    list-style: none;
+                    i{
+                        &:hover{
+                            color: green;
+                        }
+                    }
+                    span{}
+                    a{
+                        text-decoration: none;
+                        color: black;
+                    }
+                }
+            }
+        }
+        .copyright{
+            p{
+                color: black;
+                font-weight: bold;
+            }
+        }
+    }
+}
+.wrapper{
+    text-align: center;
+    background-color: green;
+    color: white;
+    padding: 60px 120px;
+    .form{
+        header{
+            font-weight: bold;
+            font-size: 30px;
+        }
+        form{
+            .error-text{
+
+            }
+            .input {
+                margin: 20px 0;
+                label{
+                    font-weight: bold;
+                    margin-left: 10px;
+                }
+                input{
+                    border-radius: 6px;
+                    border: none;
+                }
+            }
+            .button{
+                input{}
+            }
+        }
+        .link{
+            a{
+                text-decoration: none;
+                color: white;
+            }
+        }
+    }
+}
