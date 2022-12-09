@@ -1,32 +1,16 @@
-<!doctype html>
-<html lang="en">
-
-<head>
-  <title>Trang Nhân Viên</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-  <!-- Bootstrap CSS v5.2.1 -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-
-<body>
- 
+{% extends 'base.html'%}
+{%block content%}
     <div class="row"> 
         <div class="col-2">
             <ul class="nav flex-column">
                 <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#">Nhân viên</a>
+                  <a class="nav-link active" aria-current="page" href="/src/staff">Nhân viên</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Phương tiện</a>
+                  <a class="nav-link" href="/src/MCP">Phương tiện</a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">Trạm thu gom</a>
+                  <a class="nav-link" href="/src/vehicle">Trạm thu gom</a>
                 </li>
                 
               </ul>
@@ -99,12 +83,14 @@
                               </tr>
                             </thead>
                             <tbody class="tblTask">
+                                {%for mission in missions%}
                                 <tr>
-                                <td>1</td>
-                                <td>Công việc hàng ngày 1/11/2022</td>
+                                <td>{{mission.0}}</td>
+                                <td>{{mission.1}}</td>
                                 <td></td>
                                 <td></td>
                                 </tr>
+                                {%endfor%}
                             </tbody>
                             
                           </table>
@@ -119,6 +105,8 @@
             </div>
         </div>
     </div>
+
+
   
   <!-- Bootstrap JavaScript Libraries -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
@@ -128,6 +116,5 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
     integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
   </script>
-</body>
 
-</html>
+{%endblock%}

@@ -1,0 +1,9 @@
+{% extends 'base.html'%}
+{%block content%}
+    <br>
+    <h1>Staff</h1>
+    <br>
+     {%for staff in staffs%}
+     <div>{{staff}}</div>
+     {%endfor%}
+{%endblock%}
