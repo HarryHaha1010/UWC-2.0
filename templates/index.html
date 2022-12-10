@@ -1,0 +1,188 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>GREENLIFE Company</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS v5.2.1 -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-iYQeCzEYFbKjA/T2uDLTpkwGzCiq6soy8tYaI1GyVh/UjpbCx/TYkiZhlZB6+fzT" crossorigin="anonymous">
+    <link rel="stylesheet" href="{% static 'style.min.css' %}">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="row">
+                <div class="col-2 logo">
+                    <img class="w-100" src="{% static 'logo.png'%}" alt="">
+                </div>
+                <div class="col-4">
+                    <p>CÔNG TY THU GOM RÁC THẢI UWC 2.0</p>
+                </div>
+                <div class="col-4">
+                    <div class="nav mt-4">
+                        <ul>
+        
+                            <li class="mx-3">
+                                <a href="/">Trang chủ</a>
+                            </li>
+                            <li>
+                                <a href="staff">Nhân viên</a>
+                            </li>
+                            <li class="mx-3">
+                              <a href="login">Đăng nhập</a>
+                          </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="search col-3">
+                  <form class="d-flex">
+                    <input class="form-control mx-3" type="search" placeholder="Tìm kiếm" aria-label="Tìm kiếm">
+                    <button class="btn btn-outline-warning" type="submit">Tìm kiếm</button>
+                  </form>
+                </div>
+            </div>
+            
+            
+        </div>
+    </header>
+
+    <section class="carousel">
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3" aria-label="Slide 4"></button>
+              <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4" aria-label="Slide 5"></button>
+
+        </div>
+                <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static '1.jpeg'%}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static '2.png'%}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static '3.jpeg'%}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static '4.jpeg'%}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static '5.jpeg'%}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </section>
+
+    <section class="picture">
+        <div class="row ps-5">
+            <div class="col-4">
+                <div class="card " style="width: 18rem;">
+                    <img src="{%static '11.jpeg'%}" class="w-100" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Thu gom</h5>
+                      <p class="card-text text-dark">Với công nghệ thu gom rác hiện đại THT 5.0, công ty chúng tôi tự hào có thể thu gom rác hiệu quả, không gây ra tình trạng quá tải thùng rác và luôn có nhân viên thu gom rác 24/7.</p>
+                      
+                    </div>
+                  </div>
+                 </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{%static '12.jpeg' %}" class="w-100" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Phân loại</h5>
+                      <p class="card-text text-dark"> Cùng với sự phát triển của công nghệ, phân loại rác đã trở nên tự động và tiết kiệm thời gian. Không chỉ phân loại rác thải sinh hoạt thành 3 loại, chúng tôi còn đưa những rác thải đi đến các nhà máy tái chế tại thành phố Hồ Chí Minh.</p>
+                      
+                    </div>
+                  </div>
+                
+                
+            </div>
+            <div class="col-4">
+                <div class="card" style="width: 18rem;">
+                    <img src="{%static '13.jpeg' %}" class="w-100" alt="">
+                    <div class="card-body">
+                      <h5 class="card-title">Xử lý</h5>
+                      <p class="card-text text-dark"> Công đoạn xử lý của công ty với công nghệ THT 5.0 đã giúp rác thải được xử lý một cách hoàn hảo, không gây ô nhiễm môi trường. Được giải thưởng nobel 2021 về phát triển công nghệ xanh.</p>
+                      
+                    </div>
+                  </div>
+               
+                
+            </div>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+          <div class="contact-us">
+            <h3>Thông tin liên hệ</h3>
+            <div class="row">
+                <div class="col-4">
+                    <ul>
+                        <li>
+                          <i class="fa fa-map-marker-alt"></i>
+                          <span
+                            >268 Lý Thường Kiệt, Quận 10, Thành phố Hồ Chí Minh.</span
+                          >
+                        </li>
+                        <li>
+                          <i class="fa fa-phone"></i>
+                          <a href="tel:+(21)-255-999-8888">+(21)-255-999-8888</a>
+                        </li>
+                        <li>
+                          <i class="fa fa-envelope"></i>
+                          <a href="mailto:corporate-mail@support.com"
+                            >corporate-mail@support.com</a
+                          >
+                        </li>
+                      </ul>
+                </div>
+                <div class="col-8">
+                    <iframe src="https://www.google.com/maps/d/embed?mid=1vdueGlnuB2KrfUtdSZnIAtL1UaCWLwzG&amp;hl=en" width="100%" style="display: block; border: 0;" height="300"></iframe>
+                </div>
+            </div>
+            
+          </div>
+          <hr />
+          <div class="copyright">
+            <p>©  2020 Bản quyền thuộc về UWC 2.0. Tất cả các quyền được bảo hộ.</p>
+          </div>
+        </div>
+
+    
+  <!-- Bootstrap JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"
+    integrity="sha384-oBqDVmMz9ATKxIep9tiCxS/Z9fNfEXiDAYTujMAeBAsjFuCZSmKbSSUnQlmh/jp3" crossorigin="anonymous">
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.1/dist/js/bootstrap.min.js"
+    integrity="sha384-7VPbUDkoPSGFnVtYi0QogXtr74QeVeeIs99Qfg5YCF+TidwNdjvaKZX19NZ/e6oz" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>

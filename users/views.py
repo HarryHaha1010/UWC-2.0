@@ -17,7 +17,7 @@ def login_user(request):
             messages.success(request, "Input again")
             return redirect('login')
     else:
-        return render(request, 'registration/login.html')
+        return render(request, 'login.html')
 
 
 

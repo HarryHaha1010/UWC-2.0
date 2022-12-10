@@ -1,0 +1,181 @@
+.header {
+  background-color: green;
+  margin-bottom: 0px;
+}
+.header .container .row .logo {
+  border-radius: 50%;
+  background-color: white;
+  height: 90px;
+  width: 90px;
+}
+.header .container .row .col-4 p {
+  font-weight: 700;
+  font-size: 20px;
+  padding-top: 25px;
+  color: white;
+}
+.header .container .row .col-4 .nav li {
+  list-style: none;
+  display: inline;
+}
+.header .container .row .col-4 .nav li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 700;
+  font-size: 20px;
+}
+.header .container .row .col-4 .nav li a:hover {
+  color: black;
+}
+.header .container .row .search {
+  padding-top: 25px;
+}
+.picture {
+  margin-top: 0px;
+  padding: 50px;
+  background-color: green;
+  color: black;
+  padding-left: 100px;
+}
+.picture .row .col-4 .card:hover {
+  transform: translateY(-20px);
+  transition: all 0.5s;
+  box-shadow: 1px -1px 21px 1px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 1px -1px 21px 1px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 1px -1px 21px 1px rgba(0, 0, 0, 0.75);
+}
+.picture .row .col-4 .card .card-body .card-title:hover {
+  color: black;
+}
+.picture .row .col-4 .card .card-body .card-text {
+  font-size: 18px;
+}
+
+.nhiemVu {
+  margin-top: 0 !important;
+}
+.nhiemVu .row .col-2 {
+  background-color: #82CD47;
+  height: 800px;
+}
+.nhiemVu .row .col-2 .nav {
+  padding-top: 250px;
+}
+.nhiemVu .row .col-2 .nav .nav-item a {
+  color: white;
+  text-align: center;
+  font-size: 20px;
+}
+.nhiemVu .row .col-2 .nav .nav-item a:hover {
+  color: black;
+}
+.nhiemVu .row .col-10 {
+  background-color: #F0EBCE;
+}
+.nhiemVu .row .col-10 .info {
+  margin-top: 15px;
+}
+.nhiemVu .row .col-10 .info .container .row .info-title {
+  border-radius: 6px;
+  background-color: #EF9A53;
+  padding-top: 10px;
+}
+.nhiemVu .row .col-10 .info .container .row .info-title ul {
+  list-style: none;
+}
+.nhiemVu .row .col-10 .info .container .row .info-title ul li {
+  font-weight: bold;
+  text-align: right;
+}
+.nhiemVu .row .col-10 .info .container .row .info-staff {
+  background-color: white;
+  border-radius: 6px;
+}
+.nhiemVu .row .col-10 .info .container .row .info-staff ul {
+  padding-top: 10px;
+  list-style-type: none;
+}
+.nhiemVu .row .col-10 .info .container .row .info-staff ul li {
+  font-weight: bold;
+  text-align: left;
+}
+.nhiemVu .row .col-10 .task {
+  margin-top: 20px;
+}
+.nhiemVu .row .col-10 .task .container {
+  border-radius: 6px;
+  background-color: white;
+}
+.nhiemVu .row .col-10 .task .container .task-title h1 {
+  text-align: center;
+}
+.nhiemVu .row .col-10 .task .container .button {
+  text-align: right;
+  padding-bottom: 20px;
+}
+.nhiemVu .row .col-10 .task .container .modal {
+  margin-top: 60px;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+.nhiemVu .row .col-10 .task .container .modal .modal-dialog .modal-content .modal-header .modal-title {
+  text-align: center;
+  color: black;
+  font-weight: 700;
+}
+.nhiemVu .row .col-10 .task .container .modal .modal-dialog .modal-content .modal-body .form_add_task form .form-title {
+  color: black;
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+.footer {
+  margin-top: 50px;
+  font-size: 18px;
+}
+.footer .container .contact-us h3 {
+  text-align: center;
+  margin-bottom: 50px;
+}
+.footer .container .contact-us h3:hover {
+  color: green;
+}
+.footer .container .contact-us ul li {
+  list-style: none;
+}
+.footer .container .contact-us ul li i:hover {
+  color: green;
+}
+.footer .container .contact-us ul li a {
+  text-decoration: none;
+  color: black;
+}
+.footer .container .copyright p {
+  color: black;
+  font-weight: bold;
+}
+
+.wrapper {
+  text-align: center;
+  background-color: green;
+  color: white;
+  padding: 60px 120px;
+}
+.wrapper .form header {
+  font-weight: bold;
+  font-size: 30px;
+}
+.wrapper .form form .input {
+  margin: 20px 0;
+}
+.wrapper .form form .input label {
+  font-weight: bold;
+  margin-left: 10px;
+}
+.wrapper .form form .input input {
+  border-radius: 6px;
+  border: none;
+}
+.wrapper .form .link a {
+  text-decoration: none;
+  color: white;
+}/*# sourceMappingURL=style.css.map */

@@ -7,10 +7,13 @@ Sites pre-defining (HTML web pages)
 
 # Home page
 def home(request):
-    if not request.user.is_authenticated:
-        return redirect('login')
-    return HttpResponse("WELCOME TO UWC 2.0! This is our home page")
-
+   return render(request,'index.html')
+def staff(request):
+    return render(request, 'nhanvien.html')
 # Staff management page
 def staff_manage(request):
     return render(request, "src/staff_manage.html", {'missions': datas.missions})
+def MCP(request):
+    return render(request,'tramThuGom.html')
+def vehicle(request):
+    return render(request,'phuongTien.html')
