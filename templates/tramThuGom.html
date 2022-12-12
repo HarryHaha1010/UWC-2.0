@@ -83,6 +83,7 @@
                 </div>
                 <div class="task">
                     <div class="container">
+                      <br>
                         <div class="task-title">
                             <h1>Các trạm thu gom</h1>
                         </div>
@@ -90,45 +91,31 @@
                             <table class="table">
                                 <thead>
                                   <tr>
-                                    <th>Số thứ tự</th>
-                                    <th>Tên trạm</th>
-                                    <th>Vị trí</th>
-                                    <th>Trạng thái rác thải</th>
-                                    <th>Lần cuối được thu gom</th>
+                                    <th>Tên</th>
+                                    <th>Địa chỉ</th>
+                                    <th>Sức chứa</th>
+                                    <th>Trang thái</th>
                                     <th></th>
+                         
                                     
                                   </tr>
                                 </thead>
                                 <tbody id="default" class="tblTask">
-                                  <tr>
-                                  <td>1</td>
-                                  <td>Trạm số 1</td>
-                                  <td>10.826927, 106.723107</td>
-                                  <td>70%</td> 
-                                  <td>3:00:00 trước</td>
-                                  <td>
-                                    <div class="button">
-                                      <button class="btn btn-danger"onclick="xoaDefault()">Xóa</button>
-                                      <button class="btn btn-primary">Sửa</button>
-                                    </div>
-                                  </td>
-                                  </tr>
+                                  {%for MCP in MCPs%}
+                                    <tr>
+                                    <td>{{MCP.name}}</td>
+                                    <td>{{MCP.address}}</td>
+                                    <td>{{MCP.capacity}}</td>
+                                    <td>{{MCP.curr_status}}</td>
+                                    <td>
+                                      <div class="button">
+                                        <a class="btn btn-danger" href="{%url 'delete_mcp' MCP.id%}">Xóa</a>
+                                        <a class="btn btn-primary" href="{%url 'update_mcp' MCP.id%}">Sửa</a>
+                                      </div>
+                                    </td>
+                                    </tr>
+                                    {%endfor%}
                                 </tbody>
-                                
-
-                               
-
-                                <tbody id="tbody" class="tblTask">
-                                  <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td> 
-                                  <td></td>
-                                  <td></td>
-                                  </tr>
-                                </tbody>
-                        
                               </table>
                         </div>
                         <div class="button">
@@ -145,39 +132,18 @@
                               </div>
                               <div class="modal-body">
                                 <div class = "form_add_task"> 
+                                  <form action="" method=POST>
+                                    {%csrf_token%}
+                                    {{form.as_p}}
+                                    <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeForm()">Đóng</button>
+                                      <button id="xac-nhan" type="submit" class="btn btn-primary">Xác nhận</button>
+                                    </div>
+                                </form>
                                 
-                                
-                                  <form>
-                                      <label class="form-title">Số thứ tự</label> <br>
-                                
-                                      <input id="id" type = "text"> <br>
-                                
-                                      <label class="form-title">Tên trạm</label> <br>
-                                      <input id="ten"  type = "text"> <br>
-                                
-                                      <label class="form-title">Vị trí</label> <br>
-                                      <input id = "viTri"  type = "text"> <br>
-                                     
-                                
-                                      <label class="form-title">Trạng thái rác thải </label> <br>
-                                      <input id = "trangThai"  type = "text"> <br>
-                                     
-                                
-                                      <label class="form-title">Lần cuối được thu gom</label> <br>
-                                      <input id="thuGom" type = "text"> <br>
-                      
-                                      
-                                      
-                                
-                                      
-                                    
-                                  </form>
                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeForm()">Đóng</button>
-                                <button id="xac-nhan" type="button" class="btn btn-primary">Xác nhận</button>
-                              </div>
+                             
                             </div>
                           </div>
                         </div>

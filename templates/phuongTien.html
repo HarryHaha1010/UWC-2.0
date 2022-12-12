@@ -78,58 +78,43 @@
                   </ul>
             </div>
             <div class="col-10">
-                
-                <div class="info">
-                </div>
-                <div class="task">
-                    <div class="container">
-                        <div class="task-title">
-                            <h1>Phương tiện đang trong sử dụng</h1>
-                        </div>
-                        <div class="task-table">
-                            <table class="table">
-                                <thead>
-                                  <tr>
-                                    <th>Số thứ tự</th>
-                                    <th>Tên phương tiện</th>
-                                    <th>Biển số xe</th>
+              <div class="task">
+                  <div class="container">
+                    <br>
+                      <div class="task-title">
+                          <h1>Phương tiện</h1>
+                      </div>
+                      <div class="task-table">
+                          <table class="table">
+                              <thead>
+                                <tr>
+                                    <th>Id</th>
                                     <th>Trọng lượng</th>
+                                    <th>Sức chứa</th>
                                     <th>Xăng tiêu thụ</th>
                                     <th>Trạng thái</th>
                                     <th></th>
+
                                   </tr>
                                 </thead>
                                 <tbody id="default" class="tblTask">
+                                  {%for vehicle in vehicles%}
                                     <tr>
-                                    <td>1</td>
-                                    <td>G63-2020</td>
-                                    <td>51G-00001</td>
-                                    <td>3000kg</td>
-                                    <td>8.9L/100km</td>
-                                    <td>Không hoạt động</td>
+                                      <td>{{vehicle.id}}</td>
+                                      <td>{{vehicle.weight}} kg</td>
+                                      <td>{{vehicle.capacity}}</td>
+                                    <td>{{vehicle.fuel_capacity}} L/100km</td>
+                                    <td>{{vehicle.curr_status}}</td>
                                     <td>
                                       <div class="button">
-                                        <button class="btn btn-danger" onclick="xoaDefault()">Xóa</button>
-                                        <button class="btn btn-primary" onclick="suaDefault()">Sửa</button>
-                                    </div>
+                                        <a class="btn btn-danger" href="{%url 'delete_vehicle' vehicle.id%}">Xóa</a>
+                                        <a class="btn btn-primary" href="{%url 'update_vehicle' vehicle.id%}">Sửa</a>
+                                      </div>
                                     </td>
                                     </tr>
+                                    {%endfor%}
                                 </tbody>
 
-                              <tbody id="tbody" class="tblTask">
-                                <tr>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td></td>
-                                  <td>
-                                  </td>
-                                  <td></td>
-                                  </tr>
-                              </tbody>
-                          
-                                
                               </table>
                         </div>
                         <div class="button">
@@ -146,43 +131,22 @@
                                 <div class = "form_add_task"> 
                                 
                                 
-                                  <form>
-                                      <label class="form-title">Số thứ tự</label> <br>
-                                
-                                      <input id="id" type = "text"> <br>
-                                
-                                      <label class="form-title">Tên phương tiện</label> <br>
-                                      <input id="ten"  type = "text"> <br>
-                                
-                                      <label class="form-title">Biển số xe</label> <br>
-                                      <input id = "bienSo"  type = "text"> <br>
-                                     
-                                
-                                      <label class="form-title"> Chọn phương tiện </label> <br>
-                                      <input id = "trongLuong"  type = "text"> <br>
-                                     
-                                
-                                      <label class="form-title">Trọng lượng</label> <br>
-                                      <input id="xangTieuThu" type = "text"> <br>
-                      
-                                      <label class="form-title">Trạng thái</label> <br>
-                                      <input id="trangThai" type = "text"> <br>
-                                      
-                                
-                                      
-                                    
+                                  <form action="" method=POST>
+                                      {%csrf_token%}
+                                      {{form.as_p}}
+                                      <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeForm()">Đóng</button>
+                                        <button id="xac-nhan" type="submit" class="btn btn-primary">Xác nhận</button>
+                                      </div>
                                   </form>
+                               
                                 </div>
                               </div>
-                              <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" onclick="closeForm()">Đóng</button>
-                                <button id="xac-nhan" type="button" class="btn btn-primary">Xác nhận</button>
-                              </div>
+                              
                             </div>
                           </div>
                         </div>
                     </div>
-                </div>
             </div>
         </div>
 
