@@ -121,7 +121,11 @@
                                     <tr>
                                       <td>{{mission.name}}</td>
                                       <td>{{mission.description}}</td>
-                                      <td>{{mission.MCP}}</td>
+                                      <td>
+                                        {%for x in mission.MCP.all%}
+                                        {{x.name}}
+                                        {%endfor%}
+                                      </td>
                                       <td>{{mission.vehicle}}</td>
                                       <td>{{mission.route}}</td>
                                       <td>

@@ -16,7 +16,6 @@ def home(request):
 # Staff management page
 def staff_manage(request, employee_id):
     employee = Employee.objects.get(pk = employee_id)
-    print(employee.mission.name)
     if request.method  == "POST":
         form = MissionForm(request.POST)
         if form.is_valid():

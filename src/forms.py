@@ -65,12 +65,13 @@ class MissionForm(ModelForm):
             'description': 'Mô tả công việc',
             'MCP' : 'MCP',
             'vehicle' : 'Phương Tiện',
-            'Route'  : 'Tuyến đường'
+            'route'  : 'Tuyến đường'
         }
         widgets = {
             'name' : forms.TextInput(attrs={'class':'form-control'}),
             'description' : forms.TextInput(attrs={'class':'form-control'}),
-            'MCP': forms.Select(),
+            'MCP': forms.CheckboxSelectMultiple(),
             'vehicle': forms.Select(),
-            'Route' : forms.TextInput(attrs={'class':'form-control'}),
+            'route' : forms.TextInput(attrs={'class':'form-control'}),
         }
+    

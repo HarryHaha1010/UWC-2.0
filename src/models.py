@@ -53,6 +53,8 @@ class Vehicle(models.Model):
 class Mission(models.Model):
     name = models.CharField(max_length=50)
     description = models.CharField(max_length=200, blank=False)
-    MCP = models.ForeignKey(MCP, on_delete=models.PROTECT, blank= False)
+    MCP = models.ManyToManyField(MCP, blank= True, null= True)
     vehicle = models.ForeignKey(Vehicle,on_delete=models.PROTECT, blank= False)
     route = models.CharField(max_length=200)
+    def MCPs(self):
+        return ', '.join([str(a.name) for a in self.MCP.all()])
