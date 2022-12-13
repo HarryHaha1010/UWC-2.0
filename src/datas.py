@@ -8,5 +8,5 @@ list_Emloyee = Employee.objects.all()
 list_Vehicle = Vehicle.objects.all()
 list_MCP = MCP.objects.all()
 list_wd = WorkDay.objects.all()
-
+result = 'MCP2 -> MCP3 -> MCP1 -> MCP2'
 # list_task_report 

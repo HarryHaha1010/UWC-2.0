@@ -2,7 +2,7 @@ from django.shortcuts import render
 import requests
 import json
 from django.http import JsonResponse
-
+from src import datas
 # Create your views here.
 def route(request):
     url="https://graphhopper.com/api/1/vrp?key=38271ad0-121c-4b59-9e50-83f1b60866fc"
@@ -49,6 +49,6 @@ def route(request):
         mes+=' -> '+i['location_id'] #display order of MCP
     mes=mes[4:]
     print(mes)
-
+    datas.result = mes
     return JsonResponse(response.json())
 # Create your views here.

@@ -19,6 +19,7 @@ def staff_manage(request, employee_id):
     if request.method  == "POST":
         form = MissionForm(request.POST)
         if form.is_valid():
+            form.instance.route = form.cleaned_data['route'] = datas.result
             form.save()
             max = Mission.objects.all().aggregate(Max('id'))['id__max']
             if not max:
