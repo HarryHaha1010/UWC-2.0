@@ -34,6 +34,15 @@ payload = json.dumps({
         "lat": 10.7711526, 
         "lon": 106.6529604
       }
+    },
+    {
+        "id": "Quận_8",
+      "name": "Nhân_viên_Nam",
+      "address": {
+        "location_id": "MCP4",
+        "lat": 10.7360270,
+        "lon": 106.6811972
+      }
     }
     ]
     })
